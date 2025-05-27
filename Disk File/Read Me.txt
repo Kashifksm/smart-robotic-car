@@ -1,0 +1,39 @@
+				
+					Connections of Robotic Car
+ 
+	First assemble all the components on the car chases board then insert the Motor driver L298N
+	in middle of the car dc motors and connection with motor driver joint of the motor 1 left wire
+	to the motor 2 right Wire then connect it to motor driver   OUT 1 and then joint motor 1 right
+	wire to the motor 2 left and connect it to motor driver OUT 2, then joint motor 3 left wire to 
+	the motor 4 right and connect it to the motor driver OUT 3 and joint motor 3 right wire to the
+	motor 4 left and connect it to motor driver OUT 4 then connect ENA to the Arduino pin 3,ENB to pin 9,
+	IN 1 to pin 5,IN 2 to pin 6,IN 3 to pin 7,IN 4 to pin 8, then servo connect to the Arduino pin 10.
+	After connecting these pins with Arduino upload the code in Arduino given in folder
+	(Robotic Car FYP 2025 Code of Mobile Control Car and Camera Warless Connection)
+	the file name is (sketch_dec19a) after it install the apk file giver in the folder 
+	(Application Used for Mobile to Control the Car) on mobile then setting (F) for Forward,
+	(B) for Backward, (R) For Right, (L) For Left, (V) for move servo at 180 degrees right and
+	(W) for 0 degrees left, the connection of the mobile and car is done now we can control the
+	car with mobile very easily the range of this wireless communication is 30 meters max.
+	The Speed of the car is also controlled with adjusting the speed values in code of Arduino ENA and ENB points. 
+	The maximum speed of the car is 200 and minimum speed of the car is 50.
+
+						Battery Connection
+
+	Battery is using of lithium 3 sells in parallel connection for getting output 12V DC. 
+	We direct supply it to motor driver L298N VCC 12V point and ground is common. 
+	The motor driver L298N adjust the power for DC motors according to the code and it also convert 
+	this 12V to 5V DC and we use this 5V for power up our Arduino board and other components using 5V.
+					
+					Connection of ESP32 with Arduino
+
+	Connect the vcc 5V pin of Arduino to the vcc pin of esp32 and ground of Arduino to ground of esp32,
+	then connect the second last point of right side pin of esp32 to (tx) and 3rd last at the (rx) pin then sketch
+	The code in Arduino given in the folder (Robotic Car FYP 2025 Code of Mobile Control Car and Camera Wireless Connection)
+	and code name is (CameraWebServer) then after sketch we get the ip address like this (http://192.168.204.10:81/stream)
+	and past it to the code of visuals codes studio for real time wireless transmition. The code is given in the folder
+	(Car Project FYP 2025 Code and Working of Face Detection Wirelessly) for face detection have two type of
+	tasks first can take facial and names data for recognition process it takes 100 photos for comparison and also
+	recognition process and save it into the two type of files (names) and (faces_data).
+	And the main file (from sklearn) is using for real time face detection code it can detect face and also save data of
+	detection into the world file and also names data and time also include of detection it can also record the video footage of detection.
